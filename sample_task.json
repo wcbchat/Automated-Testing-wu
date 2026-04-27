@@ -1,0 +1,29 @@
+{
+  "url": "https://example.com/login",
+  "username": "demo_user",
+  "password": "demo_pass",
+  "test_cases": [
+    {
+      "case_name": "登录后URL包含dashboard",
+      "precondition": "测试账号可用，登录页可访问",
+      "test_steps": [
+        "打开 https://example.com/login",
+        "输入 #username = demo_user",
+        "输入 #password = demo_pass",
+        "点击 #submitBtn",
+        "断言地址包含 dashboard"
+      ],
+      "expected_result": "登录成功并跳转dashboard"
+    },
+    {
+      "case_name": "首页标题可见",
+      "precondition": "首页可以正常打开",
+      "test_steps": [
+        "打开首页",
+        "等待 h1",
+        "断言文本 h1 包含 Welcome"
+      ],
+      "expected_result": "页面标题文字包含Welcome"
+    }
+  ]
+}
